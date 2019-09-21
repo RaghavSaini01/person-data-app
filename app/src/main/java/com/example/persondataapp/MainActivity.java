@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private void setUpRecycler() {
         myAdapter = new MyAdapter(this, peopleList);
         personRecycler.setAdapter(myAdapter);
-        personRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
+        personRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
     }
 
 }
