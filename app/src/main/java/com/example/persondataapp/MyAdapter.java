@@ -49,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyAdapter.MyViewHolder holder, int position) {
 
         holder.name.setText(dataModelArrayList.get(position).getName());
-        holder.age.setText(dataModelArrayList.get(position).getAge());
+        holder.age.setText(dataModelArrayList.get(position).getAge() + "");
         holder.school.setText(dataModelArrayList.get(position).getSchool());
     }
 
