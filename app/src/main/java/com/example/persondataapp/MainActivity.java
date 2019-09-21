@@ -23,6 +23,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+
+import static com.example.persondataapp.Person.personAge;
+import static com.example.persondataapp.Person.personName;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,18 +58,20 @@ public class MainActivity extends AppCompatActivity {
         sortNames.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Collections.sort(peopleList, personName);
+                setUpRecycler();
 
-                Toast toDoName = Toast.makeText(getApplicationContext(), "This will sort names alphabetically once done",
+                /*Toast toDoName = Toast.makeText(getApplicationContext(), "This will sort names alphabetically once done",
                         Toast.LENGTH_SHORT);
 
-                toDoName.show();
+                toDoName.show();*/
             }
         });
 
         sortAges.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Collections.sort(peopleList);
+                Collections.sort(peopleList, personAge);
                 setUpRecycler();
                 /*Toast toDoAges = Toast.makeText(getApplicationContext(), "This will sort ages in ascending order once done",
                         Toast.LENGTH_SHORT);

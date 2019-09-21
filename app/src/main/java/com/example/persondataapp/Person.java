@@ -1,8 +1,9 @@
 package com.example.persondataapp;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class Person implements Comparable <Person> {
+public class Person{
     private String name;
     private int age;
     private String school;
@@ -28,12 +29,24 @@ public class Person implements Comparable <Person> {
     public void setSchool (String school) { this.school = school;}
 
 
-    @Override
-    public int compareTo(Person another) {
+    public static Comparator<Person> personName = new Comparator<Person>() {
+        @Override
+        public int compare(Person person1, Person person2) {
+            String name1 = person1.getName();
+            String name2 = person2.getName();
 
-        int otherAge = (another).getAge();
+            return name1.compareTo(name2);
+        }
+    };
 
-        return this.getAge() - another.getAge();
-    }
+    public static Comparator<Person> personAge = new Comparator<Person>() {
+        @Override
+        public int compare(Person person1, Person person2) {
+            int age1 = person1.getAge();
+            int age2 = person2.getAge();
+
+            return age1 - age2;
+        }
+    };
 
 }
