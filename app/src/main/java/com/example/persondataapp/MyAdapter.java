@@ -48,9 +48,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyAdapter.MyViewHolder holder, int position) {
 
-        holder.name.setText(dataModelArrayList.get(position).getName());
-        holder.age.setText(dataModelArrayList.get(position).getAge() + "");
-        holder.school.setText(dataModelArrayList.get(position).getSchool());
+        holder.name.setText("Name: " + dataModelArrayList.get(position).getName());
+        holder.age.setText("Age: " + dataModelArrayList.get(position).getAge());
+        holder.school.setText("School: " + dataModelArrayList.get(position).getSchool());
     }
 
     @Override

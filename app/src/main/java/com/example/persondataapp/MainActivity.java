@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         personRecycler = (RecyclerView) (findViewById(R.id.personrecycler));
 
-        jsonText.setText("Info will appear in the Recycler Below");
+        jsonText.setText("People's information will appear in the Recycler Below");
 
         jsonParse();
     }
