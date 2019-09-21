@@ -2,7 +2,7 @@ package com.example.persondataapp;
 
 import java.util.ArrayList;
 
-public class Person {
+public class Person implements Comparable <Person> {
     private String name;
     private int age;
     private String school;
@@ -26,5 +26,14 @@ public class Person {
     public void setName(String name) { this.name = name;}
     public void setAge (int age) { this.age = age; }
     public void setSchool (String school) { this.school = school;}
+
+
+    @Override
+    public int compareTo(Person another) {
+
+        int otherAge = (another).getAge();
+
+        return this.getAge() - another.getAge();
+    }
 
 }

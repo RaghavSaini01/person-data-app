@@ -3,4 +3,6 @@
     <string name="click_for_info">Click for Info</string>
     <string name="textview">TextView</string>
     <string name="parse_info">Parse Info</string>
+    <string name="sort_names">Sort Names</string>
+    <string name="sort_ages">Sort Ages</string>
 </resources>
