@@ -28,6 +28,16 @@
         app:layout_constraintTop_toTopOf="@+id/sortNames"
         app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/revertOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="84dp"
+        android:text="Revert Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/jsonText"
         android:layout_width="wrap_content"

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Person>peopleList;
     private MyAdapter myAdapter;
     private  RecyclerView personRecycler;
-    private Button sortNames, sortAges;
+    private Button sortNames, sortAges, revertOrder;
 
     private String url = "https://raw.githubusercontent.com/patrickfeltes/sample-hackillinois/master/people.json";
     @Override
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         sortNames = findViewById(R.id.sortNames);
         sortAges = findViewById(R.id.sortAges);
+        revertOrder = findViewById(R.id.revertOrder);
 
         personRecycler = findViewById(R.id.personrecycler);
 
@@ -77,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT);
 
                 toDoAges.show();*/
+            }
+        });
+
+        revertOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jsonParse();
+                setUpRecycler();
             }
         });
 
